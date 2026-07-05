@@ -1,0 +1,6 @@
+{
+  "name": "AI Assistant & Notes",
+  "description": "An elegant AI assistant that helps you write, organize, and automatically summarize notes using Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
