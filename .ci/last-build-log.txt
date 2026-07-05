@@ -1,0 +1,436 @@
+Downloading https://services.gradle.org/distributions/gradle-8.7-bin.zip
+............10%.............20%.............30%.............40%............50%.............60%.............70%.............80%.............90%............100%
+
+Welcome to Gradle 8.7!
+
+Here are the highlights of this release:
+ - Compiling and testing with Java 22
+ - Cacheable Groovy script compilation
+ - New methods in lazy collection properties
+
+For more details see https://docs.gradle.org/8.7/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+Calculating task graph as no cached configuration is available for tasks: assembleDebug
+WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 35
+
+This Android Gradle plugin (8.5.2) was tested up to compileSdk = 34.
+
+You are strongly encouraged to update your project to use a newer
+Android Gradle plugin that has been tested with compileSdk = 35.
+
+If you are already using the latest version of the Android Gradle plugin,
+you may need to wait until a newer version with support for compileSdk = 35 is available.
+
+For more information refer to the compatibility table:
+https://d.android.com/r/tools/api-level-support
+
+To suppress this warning, add/update
+    android.suppressUnsupportedCompileSdk=35
+to this project's gradle.properties.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Configuration cache state could not be cached: field `aarMetadataArtifacts` of task `:app:checkDebugAarMetadata` of type `com.android.build.gradle.internal.tasks.CheckAarMetadataTask`: error writing value of type 'org.gradle.api.internal.artifacts.configurations.DefaultArtifactCollection'
+> Configuration `:app:debugRuntimeClasspath` contains AndroidX dependencies, but the `android.useAndroidX` property is not enabled, which may cause runtime issues.
+  Set `android.useAndroidX=true` in the `gradle.properties` file and retry.
+  The following AndroidX dependencies are detected:
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2 -> androidx.activity:activity:1.9.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.annotation:annotation:1.8.1
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.annotation:annotation:1.8.1 -> androidx.annotation:annotation-jvm:1.8.1
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.collection:collection:1.4.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.collection:collection:1.4.4 -> androidx.collection:collection-jvm:1.4.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-unit-android:1.7.2 -> androidx.collection:collection-ktx:1.4.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.core:core:1.13.1
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.annotation:annotation-experimental:1.4.1
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.core:core:1.13.1 -> androidx.concurrent:concurrent-futures:1.1.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.core:core:1.13.1 -> androidx.interpolator:interpolator:1.0.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.lifecycle:lifecycle-runtime:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.lifecycle:lifecycle-runtime:2.8.4 -> androidx.lifecycle:lifecycle-runtime-android:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.savedstate:savedstate:1.2.1 -> androidx.arch.core:core-common:2.2.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0 -> androidx.lifecycle:lifecycle-process:2.8.4 -> androidx.lifecycle:lifecycle-livedata-core:2.8.4 -> androidx.arch.core:core-runtime:2.2.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-android:1.7.2 -> androidx.lifecycle:lifecycle-common:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-android:1.7.2 -> androidx.lifecycle:lifecycle-common:2.8.4 -> androidx.lifecycle:lifecycle-common-jvm:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.lifecycle:lifecycle-common-java8:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0 -> androidx.lifecycle:lifecycle-process:2.8.4 -> androidx.lifecycle:lifecycle-livedata-core:2.8.4
+  :app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-runtime-compose:2.8.4
+  :app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-runtime-compose:2.8.4 -> androidx.lifecycle:lifecycle-runtime-compose-android:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.runtime:runtime:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.runtime:runtime-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.runtime:runtime-saveable:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.runtime:runtime-saveable-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-runtime-ktx:2.8.4
+  :app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-runtime-ktx:2.8.4 -> androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.lifecycle:lifecycle-viewmodel:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.lifecycle:lifecycle-viewmodel:2.8.4 -> androidx.lifecycle:lifecycle-viewmodel-android:2.8.4
+  :app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4
+  :app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4 -> androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2 -> androidx.activity:activity:1.9.2 -> androidx.activity:activity-ktx:1.9.2
+  :app:debugRuntimeClasspath -> androidx.core:core-ktx:1.13.1
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0 -> androidx.lifecycle:lifecycle-process:2.8.4 -> androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2 -> androidx.activity:activity:1.9.2 -> androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.savedstate:savedstate:1.2.1
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-android:1.7.2 -> androidx.savedstate:savedstate-ktx:1.2.1
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0 -> androidx.lifecycle:lifecycle-process:2.8.4
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0 -> androidx.startup:startup-runtime:1.1.1
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2 -> androidx.activity:activity:1.9.2 -> androidx.tracing:tracing:1.0.0
+  :app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.9.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-android:1.7.2 -> androidx.autofill:autofill:1.0.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-geometry:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-geometry-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-util:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-util-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui-graphics:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-graphics-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-unit:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-unit-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-text:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-text-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui-tooling:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.animation:animation:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.animation:animation-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.animation:animation-core:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.animation:animation-core-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-layout:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-layout-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-ripple:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-ripple-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-data:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-data-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui-tooling-preview:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-preview-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-graphics-android:1.7.2 -> androidx.graphics:graphics-path:1.0.1
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-android:1.7.2 -> androidx.customview:customview-poolingcontainer:1.0.0
+  :app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2 -> androidx.activity:activity:1.9.2 -> androidx.profileinstaller:profileinstaller:1.3.1
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.core:core:1.13.1 -> androidx.versionedparcelable:versionedparcelable:1.1.1
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02
+  :app:debugRuntimeClasspath -> androidx.compose.material:material-icons-core:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-icons-core-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose.material:material-icons-extended:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-icons-extended-android:1.7.2
+  :app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.3.0
+  :app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0
+  :app:debugRuntimeClasspath -> androidx.room:room-ktx:2.6.1
+  :app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.room:room-common:2.6.1
+  :app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1
+  :app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.sqlite:sqlite:2.4.0
+  :app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.sqlite:sqlite-framework:2.4.0
+
+* Try:
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+* Exception is:
+org.gradle.configurationcache.ConfigurationCacheError: Configuration cache state could not be cached: field `aarMetadataArtifacts` of task `:app:checkDebugAarMetadata` of type `com.android.build.gradle.internal.tasks.CheckAarMetadataTask`: error writing value of type 'org.gradle.api.internal.artifacts.configurations.DefaultArtifactCollection'
+	at org.gradle.configurationcache.problems.ProblemsListener$DefaultImpls.onError(ProblemsListener.kt:37)
+	at org.gradle.configurationcache.problems.ConfigurationCacheProblems.onError(ConfigurationCacheProblems.kt:38)
+	at org.gradle.configurationcache.serialization.AbstractIsolateContext.onError(Contexts.kt:418)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:100)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriter.writeStateOf(BeanPropertyWriter.kt:53)
+	at org.gradle.configurationcache.serialization.codecs.TaskNodeCodec$writeTask$3$2$1.invokeSuspend(TaskNodeCodec.kt:102)
+	at org.gradle.configurationcache.serialization.codecs.TaskNodeCodec$writeTask$3$2$1.invoke(TaskNodeCodec.kt)
+	at org.gradle.configurationcache.serialization.codecs.TaskNodeCodec$writeTask$3$2$1.invoke(TaskNodeCodec.kt)
+	at org.gradle.configurationcache.serialization.codecs.TaskNodeCodecKt.withTaskOf(TaskNodeCodec.kt:236)
+	at org.gradle.configurationcache.serialization.codecs.TaskNodeCodecKt.access$withTaskOf(TaskNodeCodec.kt:1)
+	at org.gradle.configurationcache.serialization.codecs.TaskNodeCodec.writeTask(TaskNodeCodec.kt:96)
+	at org.gradle.configurationcache.serialization.codecs.TaskNodeCodec.encode(TaskNodeCodec.kt:73)
+	at org.gradle.configurationcache.serialization.codecs.TaskNodeCodec.encode(TaskNodeCodec.kt:66)
+	at org.gradle.configurationcache.serialization.codecs.BindingsBackedCodec.encode(BindingsBackedCodec.kt:52)
+	at org.gradle.configurationcache.serialization.DefaultWriteContext.write(Contexts.kt:87)
+	at org.gradle.configurationcache.serialization.codecs.WorkNodeCodec.doWrite(WorkNodeCodec.kt:77)
+	at org.gradle.configurationcache.serialization.codecs.WorkNodeCodec.writeWork(WorkNodeCodec.kt:56)
+	at org.gradle.configurationcache.ConfigurationCacheState.writeWorkGraphOf(ConfigurationCacheState.kt:486)
+	at org.gradle.configurationcache.ConfigurationCacheState.writeBuildContent$configuration_cache(ConfigurationCacheState.kt:447)
+	at org.gradle.configurationcache.ConfigurationCacheState.writeBuildState(ConfigurationCacheState.kt:303)
+	at org.gradle.configurationcache.ConfigurationCacheState.writeBuildsInTree(ConfigurationCacheState.kt:275)
+	at org.gradle.configurationcache.ConfigurationCacheState.writeRootBuild(ConfigurationCacheState.kt:250)
+	at org.gradle.configurationcache.ConfigurationCacheState.writeRootBuildState(ConfigurationCacheState.kt:148)
+	at org.gradle.configurationcache.ConfigurationCacheIO$writeRootBuildStateTo$1.invokeSuspend(ConfigurationCacheIO.kt:152)
+	at org.gradle.configurationcache.ConfigurationCacheIO$writeRootBuildStateTo$1.invoke(ConfigurationCacheIO.kt)
+	at org.gradle.configurationcache.ConfigurationCacheIO$writeRootBuildStateTo$1.invoke(ConfigurationCacheIO.kt)
+	at org.gradle.configurationcache.ConfigurationCacheIO$writeConfigurationCacheState$3$1.invokeSuspend(ConfigurationCacheIO.kt:204)
+	at org.gradle.configurationcache.ConfigurationCacheIO$writeConfigurationCacheState$3$1.invoke(ConfigurationCacheIO.kt)
+	at org.gradle.configurationcache.ConfigurationCacheIO$writeConfigurationCacheState$3$1.invoke(ConfigurationCacheIO.kt)
+	at org.gradle.configurationcache.serialization.RunningKt$runWriteOperation$1.invokeSuspend(Running.kt:45)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlin.coroutines.ContinuationKt.startCoroutine(Continuation.kt:115)
+	at org.gradle.configurationcache.serialization.RunningKt.runToCompletion(Running.kt:56)
+	at org.gradle.configurationcache.serialization.RunningKt.runWriteOperation(Running.kt:44)
+	at org.gradle.configurationcache.ConfigurationCacheIO.writeConfigurationCacheState(ConfigurationCacheIO.kt:203)
+	at org.gradle.configurationcache.ConfigurationCacheIO.writeRootBuildStateTo$configuration_cache(ConfigurationCacheIO.kt:150)
+	at org.gradle.configurationcache.DefaultConfigurationCache$writeConfigurationCacheState$1.run(DefaultConfigurationCache.kt:415)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withReplacedLocks(DefaultWorkerLeaseService.java:360)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$DefaultBuildProjectRegistry.withMutableStateOfAllProjects(DefaultProjectStateRegistry.java:240)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$DefaultBuildProjectRegistry.withMutableStateOfAllProjects(DefaultProjectStateRegistry.java:233)
+	at org.gradle.configurationcache.DefaultConfigurationCache.writeConfigurationCacheState(DefaultConfigurationCache.kt:414)
+	at org.gradle.configurationcache.DefaultConfigurationCache.access$writeConfigurationCacheState(DefaultConfigurationCache.kt:56)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveWorkGraph$1.invoke(DefaultConfigurationCache.kt:340)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveWorkGraph$1.invoke(DefaultConfigurationCache.kt:338)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveToCache$1$1.invoke(DefaultConfigurationCache.kt:356)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveToCache$1$1.invoke(DefaultConfigurationCache.kt:353)
+	at org.gradle.configurationcache.ConfigurationCacheRepository$StoreImpl$useForStore$1.invoke(ConfigurationCacheRepository.kt:191)
+	at org.gradle.configurationcache.ConfigurationCacheRepository$StoreImpl$useForStore$1.invoke(ConfigurationCacheRepository.kt:183)
+	at org.gradle.configurationcache.ConfigurationCacheRepository$withExclusiveAccessToCache$1.create(ConfigurationCacheRepository.kt:255)
+	at org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess.withFileLock(LockOnDemandCrossProcessCacheAccess.java:90)
+	at org.gradle.cache.internal.DefaultCacheCoordinator.withFileLock(DefaultCacheCoordinator.java:219)
+	at org.gradle.cache.internal.DefaultPersistentDirectoryStore.withFileLock(DefaultPersistentDirectoryStore.java:163)
+	at org.gradle.cache.internal.DefaultCacheFactory$ReferenceTrackingCache.withFileLock(DefaultCacheFactory.java:207)
+	at org.gradle.configurationcache.ConfigurationCacheRepository.withExclusiveAccessToCache(ConfigurationCacheRepository.kt:253)
+	at org.gradle.configurationcache.ConfigurationCacheRepository.access$withExclusiveAccessToCache(ConfigurationCacheRepository.kt:49)
+	at org.gradle.configurationcache.ConfigurationCacheRepository$StoreImpl.useForStore(ConfigurationCacheRepository.kt:183)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveToCache$1.invoke(DefaultConfigurationCache.kt:353)
+	at org.gradle.configurationcache.DefaultConfigurationCache$saveToCache$1.invoke(DefaultConfigurationCache.kt:352)
+	at org.gradle.configurationcache.ConfigurationCacheBuildOperationsKt$withStoreOperation$1.run(ConfigurationCacheBuildOperations.kt:54)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+	at org.gradle.configurationcache.ConfigurationCacheBuildOperationsKt.withStoreOperation(ConfigurationCacheBuildOperations.kt:47)
+	at org.gradle.configurationcache.DefaultConfigurationCache.saveToCache(DefaultConfigurationCache.kt:352)
+	at org.gradle.configurationcache.DefaultConfigurationCache.saveWorkGraph(DefaultConfigurationCache.kt:338)
+	at org.gradle.configurationcache.DefaultConfigurationCache.access$saveWorkGraph(DefaultConfigurationCache.kt:56)
+	at org.gradle.configurationcache.DefaultConfigurationCache$loadOrScheduleRequestedTasks$1.invoke(DefaultConfigurationCache.kt:144)
+	at org.gradle.configurationcache.DefaultConfigurationCache$loadOrScheduleRequestedTasks$1.invoke(DefaultConfigurationCache.kt:142)
+	at org.gradle.configurationcache.DefaultConfigurationCache.runWorkThatContributesToCacheEntry(DefaultConfigurationCache.kt:310)
+	at org.gradle.configurationcache.DefaultConfigurationCache.loadOrScheduleRequestedTasks(DefaultConfigurationCache.kt:142)
+	at org.gradle.configurationcache.ConfigurationCacheAwareBuildTreeWorkController$scheduleAndRunRequestedTasks$executionResult$1.apply(ConfigurationCacheAwareBuildTreeWorkController.kt:45)
+	at org.gradle.configurationcache.ConfigurationCacheAwareBuildTreeWorkController$scheduleAndRunRequestedTasks$executionResult$1.apply(ConfigurationCacheAwareBuildTreeWorkController.kt:44)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph.withNewWorkGraph(DefaultIncludedBuildTaskGraph.java:112)
+	at org.gradle.configurationcache.ConfigurationCacheAwareBuildTreeWorkController.scheduleAndRunRequestedTasks(ConfigurationCacheAwareBuildTreeWorkController.kt:44)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$scheduleAndRunTasks$1(DefaultBuildTreeLifecycleController.java:77)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$runBuild$4(DefaultBuildTreeLifecycleController.java:120)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$6(StateTransitionController.java:169)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$7(StateTransitionController.java:169)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.transition(StateTransitionController.java:169)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.runBuild(DefaultBuildTreeLifecycleController.java:117)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:77)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:72)
+	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:31)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.internal.buildtree.ProblemReportingBuildActionRunner.run(ProblemReportingBuildActionRunner.java:49)
+	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:65)
+	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:140)
+	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.lambda$execute$0(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:123)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.internal.buildtree.InitDeprecationLoggingActionExecutor.execute(InitDeprecationLoggingActionExecutor.java:66)
+	at org.gradle.internal.buildtree.InitProblems.execute(InitProblems.java:36)
+	at org.gradle.internal.buildtree.DefaultBuildTreeContext.execute(DefaultBuildTreeContext.java:40)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.lambda$execute$0(BuildTreeLifecycleBuildActionExecutor.java:71)
+	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:60)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.execute(BuildTreeLifecycleBuildActionExecutor.java:71)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:61)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor.execute(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.lambda$execute$0(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.execute(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.tooling.internal.provider.continuous.ContinuousBuildActionExecutor.execute(ContinuousBuildActionExecutor.java:110)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecutor.execute(SubscribableBuildActionExecutor.java:64)
+	at org.gradle.internal.session.DefaultBuildSessionContext.execute(DefaultBuildSessionContext.java:46)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:92)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:80)
+	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:71)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:62)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:41)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:64)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:32)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:51)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:39)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:47)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:31)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:65)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:78)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:75)
+	at org.gradle.util.internal.Swapper.swap(Swapper.java:38)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:64)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+Caused by: com.android.builder.errors.EvalIssueException: Configuration `:app:debugRuntimeClasspath` contains AndroidX dependencies, but the `android.useAndroidX` property is not enabled, which may cause runtime issues.
+Set `android.useAndroidX=true` in the `gradle.properties` file and retry.
+The following AndroidX dependencies are detected:
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2 -> androidx.activity:activity:1.9.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.annotation:annotation:1.8.1
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.annotation:annotation:1.8.1 -> androidx.annotation:annotation-jvm:1.8.1
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.collection:collection:1.4.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.collection:collection:1.4.4 -> androidx.collection:collection-jvm:1.4.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-unit-android:1.7.2 -> androidx.collection:collection-ktx:1.4.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.core:core:1.13.1
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.annotation:annotation-experimental:1.4.1
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.core:core:1.13.1 -> androidx.concurrent:concurrent-futures:1.1.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.core:core:1.13.1 -> androidx.interpolator:interpolator:1.0.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.lifecycle:lifecycle-runtime:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.lifecycle:lifecycle-runtime:2.8.4 -> androidx.lifecycle:lifecycle-runtime-android:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.savedstate:savedstate:1.2.1 -> androidx.arch.core:core-common:2.2.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0 -> androidx.lifecycle:lifecycle-process:2.8.4 -> androidx.lifecycle:lifecycle-livedata-core:2.8.4 -> androidx.arch.core:core-runtime:2.2.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-android:1.7.2 -> androidx.lifecycle:lifecycle-common:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-android:1.7.2 -> androidx.lifecycle:lifecycle-common:2.8.4 -> androidx.lifecycle:lifecycle-common-jvm:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0 -> androidx.lifecycle:lifecycle-common-java8:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0 -> androidx.lifecycle:lifecycle-process:2.8.4 -> androidx.lifecycle:lifecycle-livedata-core:2.8.4
+:app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-runtime-compose:2.8.4
+:app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-runtime-compose:2.8.4 -> androidx.lifecycle:lifecycle-runtime-compose-android:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.runtime:runtime:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.runtime:runtime-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.runtime:runtime-saveable:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.runtime:runtime-saveable-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-runtime-ktx:2.8.4
+:app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-runtime-ktx:2.8.4 -> androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.lifecycle:lifecycle-viewmodel:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.lifecycle:lifecycle-viewmodel:2.8.4 -> androidx.lifecycle:lifecycle-viewmodel-android:2.8.4
+:app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4
+:app:debugRuntimeClasspath -> androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4 -> androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2 -> androidx.activity:activity:1.9.2 -> androidx.activity:activity-ktx:1.9.2
+:app:debugRuntimeClasspath -> androidx.core:core-ktx:1.13.1
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0 -> androidx.lifecycle:lifecycle-process:2.8.4 -> androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2 -> androidx.activity:activity:1.9.2 -> androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2 -> androidx.savedstate:savedstate:1.2.1
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-android:1.7.2 -> androidx.savedstate:savedstate-ktx:1.2.1
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0 -> androidx.lifecycle:lifecycle-process:2.8.4
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0 -> androidx.startup:startup-runtime:1.1.1
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2 -> androidx.activity:activity:1.9.2 -> androidx.tracing:tracing:1.0.0
+:app:debugRuntimeClasspath -> androidx.activity:activity-compose:1.9.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-android:1.7.2 -> androidx.autofill:autofill:1.0.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-geometry:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-geometry-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-util:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-util-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui-graphics:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-graphics-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-unit:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-unit-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-text:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-text-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.emoji2:emoji2:1.3.0
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui-tooling:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.animation:animation:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.animation:animation-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.animation:animation-core:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.animation:animation-core-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-layout:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-layout-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-ripple:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-ripple-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-data:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-data-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui-tooling-preview:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-tooling-preview-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-graphics-android:1.7.2 -> androidx.graphics:graphics-path:1.0.1
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.ui:ui-android:1.7.2 -> androidx.customview:customview-poolingcontainer:1.0.0
+:app:debugRuntimeClasspath -> androidx.compose.ui:ui-test-manifest:1.7.2 -> androidx.activity:activity:1.9.2 -> androidx.profileinstaller:profileinstaller:1.3.1
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.foundation:foundation-android:1.7.2 -> androidx.core:core:1.13.1 -> androidx.versionedparcelable:versionedparcelable:1.1.1
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02
+:app:debugRuntimeClasspath -> androidx.compose.material:material-icons-core:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-icons-core-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose.material:material-icons-extended:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material:material-icons-extended-android:1.7.2
+:app:debugRuntimeClasspath -> androidx.compose.material3:material3:1.3.0
+:app:debugRuntimeClasspath -> androidx.compose:compose-bom:2024.09.02 -> androidx.compose.material3:material3-android:1.3.0
+:app:debugRuntimeClasspath -> androidx.room:room-ktx:2.6.1
+:app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.room:room-common:2.6.1
+:app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1
+:app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.sqlite:sqlite:2.4.0
+:app:debugRuntimeClasspath -> androidx.room:room-runtime:2.6.1 -> androidx.sqlite:sqlite-framework:2.4.0
+	at com.android.builder.errors.IssueReporter.reportError(IssueReporter.kt:117)
+	at com.android.builder.errors.IssueReporter.reportError$default(IssueReporter.kt:113)
+	at com.android.build.gradle.internal.dependency.AndroidXDependencyCheck$AndroidXDisabledJetifierDisabled.execute(AndroidXDependencyCheck.kt:72)
+	at com.android.build.gradle.internal.dependency.AndroidXDependencyCheck$AndroidXDisabledJetifierDisabled.execute(AndroidXDependencyCheck.kt:40)
+	at org.gradle.internal.code.DefaultUserCodeApplicationContext$CurrentApplication$1.execute(DefaultUserCodeApplicationContext.java:122)
+	at org.gradle.internal.event.BroadcastDispatch$ActionInvocationHandler.dispatch(BroadcastDispatch.java:99)
+	at org.gradle.internal.event.BroadcastDispatch$ActionInvocationHandler.dispatch(BroadcastDispatch.java:87)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:43)
+	at org.gradle.internal.event.BroadcastDispatch$SingletonDispatch.dispatch(BroadcastDispatch.java:268)
+	at org.gradle.internal.event.BroadcastDispatch$SingletonDispatch.dispatch(BroadcastDispatch.java:170)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:83)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:69)
+	at org.gradle.internal.event.BroadcastDispatch$CompositeDispatch.dispatch(BroadcastDispatch.java:381)
+	at org.gradle.internal.event.BroadcastDispatch$CompositeDispatch.dispatch(BroadcastDispatch.java:272)
+	at org.gradle.internal.event.ListenerBroadcast.dispatch(ListenerBroadcast.java:148)
+	at org.gradle.internal.event.ListenerBroadcast.dispatch(ListenerBroadcast.java:37)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy70.afterResolve(Unknown Source)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$1.call(DefaultConfiguration.java:766)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$1.call(DefaultConfiguration.java:739)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.resolveGraphInBuildOperation(DefaultConfiguration.java:739)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.lambda$resolveExclusivelyIfRequired$6(DefaultConfiguration.java:731)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$CalculatedModelValueImpl.update(DefaultProjectStateRegistry.java:505)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.resolveExclusivelyIfRequired(DefaultConfiguration.java:723)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.resolveGraphIfRequired(DefaultConfiguration.java:716)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.access$500(DefaultConfiguration.java:154)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$ResolverResultsResolutionResultProvider.getValue(DefaultConfiguration.java:690)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$ResolverResultsResolutionResultProvider.getValue(DefaultConfiguration.java:651)
+	at org.gradle.api.internal.artifacts.configurations.ResolutionResultProvider$1.getValue(ResolutionResultProvider.java:53)
+	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.getSelectedArtifacts(ResolutionBackedFileCollection.java:95)
+	at org.gradle.api.internal.artifacts.configurations.DefaultArtifactCollection.visitArtifacts(DefaultArtifactCollection.java:99)
+	at org.gradle.configurationcache.serialization.codecs.ArtifactCollectionCodec.encode(ArtifactCollectionCodec.kt:50)
+	at org.gradle.configurationcache.serialization.codecs.ArtifactCollectionCodec.encode(ArtifactCollectionCodec.kt:42)
+	at org.gradle.configurationcache.serialization.codecs.BindingsBackedCodec.encode(BindingsBackedCodec.kt:52)
+	at org.gradle.configurationcache.serialization.DefaultWriteContext.write(Contexts.kt:87)
+	at org.gradle.configurationcache.serialization.beans.BeanPropertyWriterKt.writeNextProperty(BeanPropertyWriter.kt:98)
+	... 156 more
+
+
+BUILD FAILED in 1m 3s
+Configuration cache entry discarded due to serialization error.
