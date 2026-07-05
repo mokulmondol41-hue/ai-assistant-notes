@@ -25,7 +25,9 @@ jobs:
       # project targets are installed; no third-party setup action required.
       - name: Ensure required Android SDK packages are installed
         run: |
-          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -maxdepth 2 -name sdkmanager -type f | sort -r | head -n1)"
+          SDK_ROOT="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
+          echo "Android SDK root: $SDK_ROOT"
+          SDKMANAGER="$(find "$SDK_ROOT" -type f -name sdkmanager 2>/dev/null | sort -r | head -n1)"
           if [ -z "$SDKMANAGER" ]; then
             SDKMANAGER="$(command -v sdkmanager || true)"
           fi
