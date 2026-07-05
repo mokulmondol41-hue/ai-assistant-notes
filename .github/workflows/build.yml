@@ -46,7 +46,9 @@ jobs:
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: ./gradlew assembleDebug --stacktrace 2>&1 | tee build-output.log
+        run: |
+          set -o pipefail
+          ./gradlew assembleDebug --stacktrace 2>&1 | tee build-output.log
 
       - name: Save build log on failure (for diagnosis)
         if: steps.build.outcome == 'failure'
